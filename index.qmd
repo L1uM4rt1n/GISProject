@@ -2,6 +2,8 @@
 title: "GIS Project G2T4"
 ---
 
-Welcome to our GIS Project website. For the purpose of our project, we will be assessing the effectiveness of the construction of the new Thompson-East Coast Stage 4 MRT Stations.
+Welcome to our GIS Project website.
 
-![Fig 1. G2T4 Group Photo *from left(Martin, Jeremy, and Wen Xin)*](images/grpPic-01.jpg){fig-align="center"}
+In our project website, we will be assessing the effectiveness of the construction of the new Thompson-East Coast Stage 4 MRT Stations.
+
+![Fig 1. G2T4 Group Photo *from left(Martin, Zhou Ming, and Wen Xin)*](grpPic.jpg){fig-align="center"}
