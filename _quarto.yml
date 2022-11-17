@@ -9,10 +9,10 @@ website:
         text: Overview
       - href: methodology.gmd
         text: Methodology
-      - href: analysis.qmd
+      - href: maps.qmd
         text: Analysis
       - href: findings.qmd
-        text: Results & Discussion
+        text: Report
     right:
       - href: index.qmd
         text: Home
@@ -20,7 +20,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: flatly
     css: styles.css
     toc: true
 
