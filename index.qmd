@@ -1,5 +1,5 @@
 ---
-title: "GIS Project"
+title: "GIS Project G2T4"
 ---
 
-Welcome to our GIS Project web site.
+Welcome to our GIS Project website. In our project website, we will be assessing the effectiveness of the construction of the new Thompson-East Coast Stage 4 MRT Stations.
