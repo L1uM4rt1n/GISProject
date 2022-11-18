@@ -40,5 +40,26 @@
     "title": "Overview",
     "section": "Tasks",
     "text": "Tasks\nThe project tasks are as follows:"
+  },
+  {
+    "objectID": "poster.html",
+    "href": "poster.html",
+    "title": "Poster",
+    "section": "",
+    "text": "This is our team’s poster"
+  },
+  {
+    "objectID": "report.html",
+    "href": "report.html",
+    "title": "Report",
+    "section": "",
+    "text": "We have attached a link to our Final Report: GIS G2_T4 Final Report.docx"
+  },
+  {
+    "objectID": "findings.html",
+    "href": "findings.html",
+    "title": "Project Analysis",
+    "section": "",
+    "text": "vgv"
   }
 ]
