@@ -2,5 +2,3 @@
 title: "Project Analysis"
 editor: visual
 ---
-
-vgv
