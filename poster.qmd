@@ -1,4 +1,8 @@
 ---
-title: "poster"
+title: "Poster"
 editor: visual
 ---
+
+This is our team's poster
+
+![](images/GIS%20G2%20Group%204%20Poster%20(1).jpg){fig-align="center"}
