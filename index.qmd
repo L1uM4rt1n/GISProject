@@ -2,8 +2,10 @@
 title: "GIS Project G2T4"
 ---
 
-Welcome to our GIS Project website.
+Welcome to G2T4's Project website! Our project is titled: From Coast to City.
 
-In our project website, we will be assessing the effectiveness of the construction of the new Thompson-East Coast Stage 4 MRT Stations.
+### About our Project
 
-![Fig 1. G2T4 Group Photo *from left(Martin, Zhou Ming, and Wen Xin)*](grpPic.jpg){fig-align="center"}
+### Team Introduction
+
+![Fig 1. G2T4 *from left(Martin, Zhou Ming, and Wen Xin)*](grpPic.jpg){fig-align="center"}

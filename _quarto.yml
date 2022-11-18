@@ -2,16 +2,18 @@ project:
   type: website
 
 website:
-  title: "GISProject"
+  title: "G2T4: From Coast to City"
   navbar:
     left: 
       - href: overview.html
-        text: Overview
-      - href: methodology.gmd
-        text: Methodology
-      - href: maps.qmd
-        text: Analysis
+        text: Project Overview
+      - href: documentation.qmd
+        text: Step-by-Step Guide
+      - href: poster.qmd
+        text: Poster
       - href: findings.qmd
+        text: Project Analysis
+      - href: report.qmd
         text: Report
     right:
       - href: index.qmd
