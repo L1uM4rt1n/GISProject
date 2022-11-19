@@ -18,7 +18,7 @@
     "href": "overview.html",
     "title": "Project Overview",
     "section": "",
-    "text": "Project Objectives\n\n\nDataset\n\n\nProject Schedule"
+    "text": "Project Objective\nOur team is tasked with studying the catchment area of these MRT Stations by doing a network analysis of each station and their surrounding vicinity.\nBy plotting a buffer and a polygon using the QNeat3 Pluggin, our group analysed the effectiveness of the construction of the TEL stage 4 MRT stations based on how convenient did it bring commuters from that vicinity to town and from elsewhere to that vicinity.\n\n\nDataset\nThe data that we collected comes from 4 sources: Urban Redevelopment Authority (URA), Land Transport Authority (LTA), Geofabrik GmbH, and Google Maps. A more detailed table can be referred to in Appendix 1.\n\n\nProject Schedule and Gantt Chart"
   },
   {
     "objectID": "overview.html#literature-review",

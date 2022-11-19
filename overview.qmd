@@ -39,7 +39,9 @@ vicinity.
 
 ### Dataset
 
-The data that we collected comes from 4 sources: Urban Redevelopment Authority (URA), Land Transport Authority (LTA), Geofabrik GmbH, and Google Maps. A more detailed table can be referred to in **Appendix 1.**
+The data that we collected comes from 4 sources: Urban Redevelopment Authority (URA), Land Transport Authority (LTA), Geofabrik GmbH, and Google Maps.
+
+![](images/paste-795237CA.png)
 
 ### Project Schedule and Gantt Chart
 
