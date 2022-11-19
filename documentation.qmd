@@ -2,3 +2,151 @@
 title: "Methodology"
 editor: visual
 ---
+
+In summary, our group created a network analysis near every station by setting 10 and 15 minutes buffer distances and Iso-Areas Polygons. On average, a person could cover about
+one mile (1.6km) in 20 minutes. We used 10 and 15 minutes as a maximum span of
+time that a person is willing to cover to walk to an MRT Station from his or
+her home, which would equate to about 0.8 and 1.2km respectively. The resulting
+layers will be used for our analysis of the MRT stations\' catchment areas.
+
+### Data Preparation and Cleaning
+
+#### Selection of Required Data
+
+The Datasets that are being used for the project includes:
+
+-   <https://data.gov.sg/dataset/master-plan-2019-subzone-boundary-no-sea> contains the subzone of Singapore where we use it to outline the area of Singapore.
+
+-   <https://download.geofabrik.de/asia/malaysia-singapore-brunei.html> Singapore, Malaysia and Brunei OSM Data. Data was downloaded as a whole but only the Singapore roads and buildings layer were kept.
+
+-   <https://datamall.lta.gov.sg/content/dam/datamall/datasets/Geospatial/TrainStation.zip> Data points of the MRT stations.
+
+-   [TE Stage 4 MRT Stations.csv](https://smu-my.sharepoint.com/:x:/g/personal/wenxin_law_2021_scis_smu_edu_sg/EZuQldQITppGoyfZ_Cc_-7ABX_7J3HkXakwR1AKc-8C4bw?e=LGCGhT) Using coordinates found from Google Maps, we created a CSV file for the Stage 4 MRT stations with their individual latitude and longitude points.
+
+Adding of Datasets
+
+-   TE Stage 4 MRT Stations
+
+    -   First go to \'Add Layer\', then \'Add Delimited Text Layer\'.
+
+        ![](images/paste-D4E8B869.png)
+
+    -   Select the [TE Stage 4 MRT Stations.csv](https://smu-my.sharepoint.com/:x:/g/personal/wenxin_law_2021_scis_smu_edu_sg/EZuQldQITppGoyfZ_Cc_-7ABX_7J3HkXakwR1AKc-8C4bw?e=LGCGhT) CSV file. Under the
+        X and Y field, select Longitude and Latitude respectively. Leave Geometry CRS
+        as WGS 84.
+
+        ![](images/paste-C7F1CD28.png)
+
+    -   The following points should appear as below.
+
+        ![](images/paste-797318EF.png)
+
+    -   Save the layer as GeoPackage and name the layer Stage4_TE_Line, and the
+        CRS as EPSG:3414 -- SVY21.
+
+        ![](images/paste-30831D0B.png)
+
+-   MP19 Subzone Layer
+
+    -   Add in the MP19 Subzone kml layer.
+
+        ![](images/paste-5DC32ACA.png)
+
+-   OSM layer
+
+    -   Add the OSM road layer in. Use 'Select by polygon' and select the area outlined by the MP19 Subzone layer, leaving out some of the SOuthern Islands, Pulau Ubin and Pulau Tekong.
+
+        ![](images/paste-92E1AC01.png)
+
+    -   Export and Save Selected Features as GeoPackage. Name the layer as all_roads.
+
+        ![](images/paste-E951A3EE.png)
+
+    -   Repeat the steps for OSM buildings layer and name it as all_buildings.
+
+    -   Remove the OSM buildigns and roads layer.
+
+-   Other MRT lines
+
+    -   Add the MRTLRTStnPtt.shp file into the layers. There are many different lines but the ones closest to the Stage 4 Thomson-East Coast Line are Circle Line, Downtown Line, and the East-West Line.
+
+    -   Open the attribute table of the shape file and click 'Select by Expression'.
+
+        ![](images/paste-FAA11AE0.png)
+
+    -   Select by STN_NO with the letter 'CC' in it.
+
+        ![](images/paste-502A8E45.png)![](images/paste-035C66DE.png)
+
+    -   Save the selected features and name the layer Circle Line.
+
+    -   Do the same for the Downtown and East-West Line, replacing the 'CC%' with 'DT%' and 'EW%' and name the layers Downtown Line and East-West Line respectively.
+
+-   Cleaning Road Data
+
+    -   There are expressways where the people are not able to walk on. Thus, we have to filter out the following roads with these fclass: motorway, motorway_link, trunk, trunk_link.
+
+    -   Select all_roads layer and open attribute table, click on select by expression.
+
+    -   Select the roads with fclass: 'motorway', 'motorway_link', 'trunk', 'trunk_link'.
+
+        ![](images/paste-1D8021B1.png)
+
+    -   Select 'Invert Selection' ![](images/paste-645C3FAE.png){width="18"}to select all the roads without the ones needed to be filtered away. Export and save selected features in GeoPackage and name the layer as walking_roads.
+
+-   Cleaning Buildings Data
+
+    -   The all_buildings layer consists of several null values under the "type" column. After looking at Google Maps, there consists of different types of low-rise buildings, shophouses, etc. Thus, the team decided to replace the null values for "type" column with low-rise buildings.
+
+    -   Right-click on all_buildings layer and select Open Attribute Table. Click on Select by Expression. Type in "type" is null in the expression box. Click on Select Features. This will select all building types that have null values.
+
+        ![](images/paste-5B5F2DC1.png)
+
+    -   After selecting features, Open field calculator and update the
+        values to \'low-rise buildings\'.
+
+        ![](images/paste-C4E53546.png)
+
+    -   Click on the pencil icon to save the edits.
+
+        ![](images/paste-E0C83C2E.png)
+
+#### Preparation of Buffers and Iso-Area Polygons
+
+1.  Objective: Creation of Buffer and Iso-Areas with these data
+
+-   Creating a 15min Buffer Area
+
+    -   Select the first station of Stage 4 Thomson-East Coast Line (Founders' Memorial).
+
+    -   Go to Vector -\> Select Geoprocessing Tools -\> Buffer.
+
+    -   Check 'Selected Features only'
+
+        Distance -- 0.75 miles (average walking distance of 15min)
+
+        Segments -- 100
+
+        ![](images/paste-6534AF08.png)
+
+    -   If done correctly, this should be shown:
+
+        ![](images/paste-AB42DDFA.png)
+
+    -   Save the temporary layer 'Buffer' that was generated to GeoPackage, with the layer name as TE22A 15mins Walking Radius.
+
+-   Creating a 10min Buffer Area
+
+    -   Using the same steps, the only difference is changing the distance to 0.5miles (average walking distance of 10mins).
+
+    -   If done correctly, this should be shown:
+
+        ![](images/paste-F874DED0.png)
+
+-   Creating a 15min Iso-Area as Polygon
+
+    -   Using a plugin, QNEAT3, under Iso-Areas, select Iso-Area as Polygons (from Layer).
+
+#### Creating Symbols and /or Area Colour
+
+#### Piecing the layers together
