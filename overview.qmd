@@ -9,6 +9,4 @@ editor: visual
 
 ### Dataset
 
-### Methodology
-
 ### Project Schedule
