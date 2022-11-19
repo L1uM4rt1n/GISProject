@@ -8,7 +8,7 @@ website:
       - href: overview.html
         text: Project Overview
       - href: documentation.qmd
-        text: Documentation Guide
+        text: Methodology
       - href: poster.qmd
         text: Poster
       - href: findings.qmd

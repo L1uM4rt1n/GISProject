@@ -1,4 +1,4 @@
 ---
-title: "Documentation Guide"
+title: "Methodology"
 editor: visual
 ---
