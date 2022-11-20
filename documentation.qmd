@@ -229,7 +229,7 @@ Adding of Datasets
 
     -   Using TE22A 15mins Walking Radius, right click on select Properties. Click on Symbology --\> Change fill colour to #000080 --\> Change Opacity to 30% --\> Save Symbol and name it as a Buffer layer --\> it should appear in Project Styles for east access.
 
-        ![](images/paste-22D2DAB8.png)\*\*\*\*\*\*\* Blur IMAGE \*\*\*\*\*\*
+        ![](images/paste-5E4E6988.png)
 
     -   If done correctly, this should be shown:
 
