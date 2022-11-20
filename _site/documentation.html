@@ -119,6 +119,9 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#data-preparation-and-cleaning" id="toc-data-preparation-and-cleaning" class="nav-link active" data-scroll-target="#data-preparation-and-cleaning">Data Preparation and Cleaning</a></li>
   <li><a href="#selection-of-required-data" id="toc-selection-of-required-data" class="nav-link" data-scroll-target="#selection-of-required-data">Selection of Required Data</a></li>
+  <li><a href="#adding-of-datasets" id="toc-adding-of-datasets" class="nav-link" data-scroll-target="#adding-of-datasets">Adding of Datasets</a></li>
+  <li><a href="#preparation-of-buffers-and-iso-area-polygons" id="toc-preparation-of-buffers-and-iso-area-polygons" class="nav-link" data-scroll-target="#preparation-of-buffers-and-iso-area-polygons">Preparation of Buffers and Iso-Area Polygons</a></li>
+  <li><a href="#creating-symbols-and-or-area-colour" id="toc-creating-symbols-and-or-area-colour" class="nav-link" data-scroll-target="#creating-symbols-and-or-area-colour">Creating Symbols and /or Area Colour</a></li>
   <li><a href="#piecing-the-layers-together" id="toc-piecing-the-layers-together" class="nav-link" data-scroll-target="#piecing-the-layers-together">Piecing the layers together</a></li>
   </ul>
 </nav>
@@ -155,7 +158,9 @@ ul.task-list li input[type="checkbox"] {
 <li><p><a href="https://datamall.lta.gov.sg/content/dam/datamall/datasets/Geospatial/TrainStation.zip" class="uri">https://datamall.lta.gov.sg/content/dam/datamall/datasets/Geospatial/TrainStation.zip</a> Data points of the MRT stations.</p></li>
 <li><p><a href="https://smu-my.sharepoint.com/:x:/g/personal/wenxin_law_2021_scis_smu_edu_sg/EZuQldQITppGoyfZ_Cc_-7ABX_7J3HkXakwR1AKc-8C4bw?e=LGCGhT">TE Stage 4 MRT Stations.csv</a> Using coordinates found from Google Maps, we created a CSV file for the Stage 4 MRT stations with their individual latitude and longitude points.</p></li>
 </ul>
-<p>Adding of Datasets</p>
+</section>
+<section id="adding-of-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="adding-of-datasets">Adding of Datasets</h3>
 <ul>
 <li><p>TE Stage 4 MRT Stations</p>
 <ul>
@@ -211,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/paste-E0C83C2E.png" class="img-fluid"></p></li>
 </ul></li>
 </ul>
-<section id="preparation-of-buffers-and-iso-area-polygons" class="level4">
-<h4 class="anchored" data-anchor-id="preparation-of-buffers-and-iso-area-polygons">Preparation of Buffers and Iso-Area Polygons</h4>
+</section>
+<section id="preparation-of-buffers-and-iso-area-polygons" class="level3">
+<h3 class="anchored" data-anchor-id="preparation-of-buffers-and-iso-area-polygons">Preparation of Buffers and Iso-Area Polygons</h3>
 <p><strong>Objective</strong>: Creation of Buffer and Iso-Areas with these data</p>
 <ul>
 <li><p>Creating a 15min Buffer Area</p>
@@ -270,8 +276,8 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Repeat the Steps for Buffer, Iso-Area Polygon and Catchment area buildings for the rest of the Stage 4 Thomson-East Coast Line.</p></li>
 </ul>
 </section>
-<section id="creating-symbols-and-or-area-colour" class="level4">
-<h4 class="anchored" data-anchor-id="creating-symbols-and-or-area-colour">Creating Symbols and /or Area Colour</h4>
+<section id="creating-symbols-and-or-area-colour" class="level3">
+<h3 class="anchored" data-anchor-id="creating-symbols-and-or-area-colour">Creating Symbols and /or Area Colour</h3>
 <ul>
 <li><p>For point Data (Symbols)</p>
 <ul>
@@ -293,7 +299,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>We will be using a standardised colour across all 10min and 15min Buffer Layers. In addition, the transparency will be lower for clearer visibility of the catchment area.</p></li>
 <li><p>Using TE22A 15mins Walking Radius, right click on select Properties. Click on Symbology –&gt; Change fill colour to #000080 –&gt; Change Opacity to 30% –&gt; Save Symbol and name it as a Buffer layer –&gt; it should appear in Project Styles for east access.</p>
-<p><img src="images/paste-22D2DAB8.png" class="img-fluid">******* Blur IMAGE ******</p></li>
+<p><img src="images/paste-5E4E6988.png" class="img-fluid"></p></li>
 <li><p>If done correctly, this should be shown:</p>
 <p><img src="images/paste-80AC281B.png" class="img-fluid"></p></li>
 <li><p>Repeat the steps for all 10min and 15min Walking Radius (Use the Saved Symbol in Project styles for easy access).</p></li>
@@ -420,7 +426,6 @@ ul.task-list li input[type="checkbox"] {
 <p><img src="images/paste-5B7130F3.png" class="img-fluid"></p></li>
 </ul></li>
 </ul>
-</section>
 </section>
 <section id="piecing-the-layers-together" class="level3">
 <h3 class="anchored" data-anchor-id="piecing-the-layers-together">Piecing the layers together</h3>
