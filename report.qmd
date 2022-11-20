@@ -3,6 +3,6 @@ title: "Report"
 editor: visual
 ---
 
-### Report Link
+## Report Link
 
 We have attached a link to our Final Report: [GIS G2_T4 Final Report.docx](https://smu-my.sharepoint.com/:w:/g/personal/wenxin_law_2021_scis_smu_edu_sg/EQtEgFmLdHFFt28sjaIHfLgBfkOOpqYEI53SmD0KXej-bA?e=vH8OBf)

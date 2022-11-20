@@ -4,7 +4,7 @@ title: "GIS Project G2T4"
 
 Welcome to G2T4's Project website! Our project is titled: From Coast to City.
 
-### About our Project
+## About our Project
 
 From Coast to City is a project under the SMT201 Geographical Information Systems for Urban Planning module in Singapore Management University (SMU). Under the guidance of Professor Kam Tin Seong, our group aims to study the catchment areas of the Thomson-East Coast Line (TEL) Stage 4 MRT Stations.
 
@@ -14,10 +14,8 @@ With the high construction cost of building a new MRT line, where Singapore's si
 
 Overall, we concluded that the opening of the stations in TEL's stage 4 construction will reduce the travelling time for residents in the Eastern coastal area to the nearest MRT station, while increasing accessibility for tourists who want to visit attraction sites such as the Founders' Memorial.
 
-### Team Introduction
+## Team Introduction
 
-Our team consists of, from left: Martin, Zhou Ming, and Wen Xin. We are a group of
-Smart-City Management and Technology students in Singapore Management
-University studying SMT201.
+Our team consists of, from left: Martin, Zhou Ming, and Wen Xin. We are a group of Smart-City Management and Technology students in Singapore Management University studying SMT201.
 
 ![](grpPic.jpg){fig-align="center"}

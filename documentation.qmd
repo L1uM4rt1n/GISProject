@@ -7,7 +7,7 @@ In summary, our group created a network analysis near every station by setting 1
 
 ### Data Preparation and Cleaning
 
-#### Selection of Required Data
+### Selection of Required Data
 
 The Datasets that are being used for the project includes:
 
@@ -213,11 +213,11 @@ Adding of Datasets
 
     -   For Circle Line, Downtown Line and East-West Line, without the need to save each station individually, repeat the above steps but with the following colours:
 
-        Circle Line -- #ffbf00
+        **Circle Line** -- #ffbf00
 
-        Downtown Line -- #0009be
+        **Downtown Line** -- #0009be
 
-        East-West Line -- #00d644
+        **East-West Line** -- #00d644
 
     -   If done correctly, this should be shown:
 
@@ -229,7 +229,7 @@ Adding of Datasets
 
     -   Using TE22A 15mins Walking Radius, right click on select Properties. Click on Symbology --\> Change fill colour to #000080 --\> Change Opacity to 30% --\> Save Symbol and name it as a Buffer layer --\> it should appear in Project Styles for east access.
 
-        \*\*\*\*\*\*\* IMAGE \*\*\*\*\*\*
+        ![](images/paste-22D2DAB8.png)\*\*\*\*\*\*\* Blur IMAGE \*\*\*\*\*\*
 
     -   If done correctly, this should be shown:
 
@@ -257,6 +257,71 @@ Adding of Datasets
 
 -   For the buildings in Catchment Area
 
-    -   
+    -   We will categorise the buildings based on its attribute 'type'. We will also be standardising each colour for each type based on the following colours:
+
+        | Building Type     | Colour Code |
+        |-------------------|-------------|
+        | apartments        | #477bce     |
+        | church            | #e1de21     |
+        | commercial        | #beb956     |
+        | construction      | #45e1c4     |
+        | garage            | #6c6c6c     |
+        | house             | #9cf046     |
+        | kindergarten      | #a27a50     |
+        | low-rise building | #0101ff     |
+        | mosque            | #55b987     |
+        | public            | #42ce81     |
+        | residential       | #4a2b84     |
+        | roof              | #ea58ca     |
+        | school            | #ff3355     |
+        | temple            | #c3154c     |
+        | terrace           | #6c8341     |
+        | retail            | #9200f4     |
+        | hut               | #501dcf     |
+        | office            | #ff85ed     |
+        | EiS-Residences    | #01f7ff     |
+        | service           | #d44f3b     |
+
+    -   Using TE22A 15mins Building Layer, Right Click and Select Properties --\> Select Symbology --\> save the symbols for the type of buildings. Below is an example for apartments:
+
+        ![](images/paste-E94CBB02.png)
+
+        \*\*\*\*\*\* Blur IMAGE \*\*\*\*\*\*
+
+    -   Do the same for the other categories of buildings.
+
+    -   If done correctly, this should show in your Project Styles:
+
+        ![](images/paste-326A24B8.png)
+
+    -   With the saved symbols, now select categorised symbols in the drop-down box at the top --\> Under Value, select 'type' --\> Click Classify --\> Change the colours according to the saved symbols --\> remove all other values.
+
+        ![](images/paste-BF4B565D.png)
+
+    -   Repeat the steps for all the stations' catchment area buildings.
+
+    -   If done correctly, this should show:
+
+        ![](images/paste-F507B5FD.png)
+
+-   Thickness of roads
+
+    -   For ease of visibility, we will decrease the walking_roads layer thickness to 0.2mm and change the colour to black.
+
+        ![](images/paste-5B7130F3.png)
 
 #### Piecing the layers together
+
+-   After we have completed the standardisation and changing of the symbology and colours, we will now piece the layers together. Our analysis will be based on each Catchment Area based on 10mins or 15mins walking time.
+
+    -   Using TE22A 15mins, activate and place the layers in the following order: the MRT stations and lines, walking_roads, TE22A 15mins Buildings, TE22A 15mins Catchment Area, TE22A 15mins Walking Radius, and Open Street Map, as show in the Layers Panel in the image below:
+
+        ![](images/paste-50F7081B.png)
+
+    -   Right click on the Walking radius and click Zoom to Layer. Create a new Print Layout --\> Add Map and Legends --\> Save as Image.
+
+    -   If done correctly, it should look similar to the screenshot below:
+
+        ![](images/paste-5BDC765D.png)
+
+    -   Repeat the above steps for each station's 10mins and 15mins layers as our analysis will be based on each station's 10mins and 15mins Catchment Areas.
