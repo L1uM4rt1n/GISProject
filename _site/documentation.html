@@ -140,7 +140,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>In summary, our group created a network analysis near every station by setting 10 and 15 minutes buffer distances and Iso-Areas Polygons. On average, a person could cover about one mile (1.6km) in 20 minutes. We used 10 and 15 minutes as a maximum span of time that a person is willing to cover to walk to an MRT Station from his or her home, which would equate to about 0.8 and 1.2km respectively. The resulting layers will be used for our analysis of the MRT stations' catchment areas.</p>
+<p>In summary, our group created a network analysis near every station by setting 10 and 15 minutes buffer distances and Iso-Areas Polygons. On average, a person could cover about one mile (1.6km) in 20 minutes. We used 10 and 15 minutes as a maximum span of time that a person is willing to cover to walk to an MRT Station from his or her home, which would equate to about 0.8 and 1.2km respectively. The resulting layers will be used for our analysis of the MRT stations’ catchment areas.</p>
 <section id="data-preparation-and-cleaning" class="level3">
 <h3 class="anchored" data-anchor-id="data-preparation-and-cleaning">Data Preparation and Cleaning</h3>
 <section id="selection-of-required-data" class="level4">
@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
 <ul>
 <li><p>TE Stage 4 MRT Stations</p>
 <ul>
-<li><p>First go to 'Add Layer', then 'Add Delimited Text Layer'.</p>
+<li><p>First go to ‘Add Layer’, then ‘Add Delimited Text Layer’.</p>
 <p><img src="images/paste-D4E8B869.png" class="img-fluid"></p></li>
 <li><p>Select the <a href="https://smu-my.sharepoint.com/:x:/g/personal/wenxin_law_2021_scis_smu_edu_sg/EZuQldQITppGoyfZ_Cc_-7ABX_7J3HkXakwR1AKc-8C4bw?e=LGCGhT">TE Stage 4 MRT Stations.csv</a> CSV file. Under the X and Y field, select Longitude and Latitude respectively. Leave Geometry CRS as WGS 84.</p>
 <p><img src="images/paste-C7F1CD28.png" class="img-fluid"></p></li>
@@ -202,7 +202,7 @@ ul.task-list li input[type="checkbox"] {
 <li><p>The all_buildings layer consists of several null values under the “type” column. After looking at Google Maps, there consists of different types of low-rise buildings, shophouses, etc. Thus, the team decided to replace the null values for “type” column with low-rise buildings.</p></li>
 <li><p>Right-click on all_buildings layer and select Open Attribute Table. Click on Select by Expression. Type in “type” is null in the expression box. Click on Select Features. This will select all building types that have null values.</p>
 <p><img src="images/paste-5B5F2DC1.png" class="img-fluid"></p></li>
-<li><p>After selecting features, Open field calculator and update the values to 'low-rise buildings'.</p>
+<li><p>After selecting features, Open field calculator and update the values to ‘low-rise buildings’.</p>
 <p><img src="images/paste-C4E53546.png" class="img-fluid"></p></li>
 <li><p>Click on the pencil icon to save the edits.</p>
 <p><img src="images/paste-E0C83C2E.png" class="img-fluid"></p></li>
@@ -211,14 +211,12 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="preparation-of-buffers-and-iso-area-polygons" class="level4">
 <h4 class="anchored" data-anchor-id="preparation-of-buffers-and-iso-area-polygons">Preparation of Buffers and Iso-Area Polygons</h4>
-<ol type="1">
-<li>Objective: Creation of Buffer and Iso-Areas with these data</li>
-</ol>
+<p><strong>Objective</strong>: Creation of Buffer and Iso-Areas with these data</p>
 <ul>
 <li><p>Creating a 15min Buffer Area</p>
 <ul>
 <li><p>Select the first station of Stage 4 Thomson-East Coast Line (Founders’ Memorial).</p></li>
-<li><p>Go to Vector -&gt; Select Geoprocessing Tools -&gt; Buffer.</p></li>
+<li><p>Go to Vector –&gt; Select Geoprocessing Tools –&gt; Buffer.</p></li>
 <li><p>Check ‘Selected Features only’</p>
 <p>Distance – 0.75 miles (average walking distance of 15min)</p>
 <p>Segments – 100</p>
@@ -235,12 +233,76 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>Creating a 15min Iso-Area as Polygon</p>
 <ul>
-<li>Using a plugin, QNEAT3, under Iso-Areas, select Iso-Area as Polygons (from Layer).</li>
+<li><p>Using a plugin, QNEAT3, under Iso-Areas, select Iso-Area as Polygons (from Layer).</p>
+<p><img src="images/paste-BECCAD46.png" class="img-fluid"></p></li>
+<li><p>Under Vector layer, select walking_roads layer.</p>
+<p>Under Start Points, select Stage4_TE_line, check selected features only Change Unique point ID Field to STN_NAME.</p>
+<p>Under Size of Iso-Area and Contour Interval, input 900 (15 mins = 900 seconds).</p>
+<p>Change path type to calculate to Fastest Path (time optimisation).</p>
+<p><img src="images/paste-CACD2F38.png" class="img-fluid"></p></li>
+<li><p>If done correctly, this should be shown:</p>
+<p><img src="images/paste-29402EE0.png" class="img-fluid"></p></li>
+<li><p>Save the polygon layer into the GeoPackage, naming the layer and remove the interpolation layer.</p></li>
 </ul></li>
+<li><p>Creating a 10min Iso-Area as Polygon</p>
+<ul>
+<li><p>Using the same steps, the only changes that needs to be made is:</p>
+<p>Under Size of Iso-Area and Contour Interval, input 600 (10 mins = 600 seconds).</p></li>
+<li><p>If done correctly, this should be shown:</p>
+<p><img src="images/paste-52FA9B83.png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>Catchment area Buildings – We will be looking at what buildings are there in the catchment area.</p>
+<ul>
+<li><p>For 15min Catchment Area, select Clip under Geoprocessing Tools.</p>
+<p><img src="images/paste-F7B7CEA8.png" class="img-fluid"></p></li>
+<li><p>Under Input Layer, select all_buildings layer</p>
+<p>Under Overlay layer, select TE22A 15mins Catchment Area layer</p>
+<p><img src="images/paste-7606C7F8.png" class="img-fluid"></p></li>
+<li><p>If done correctly, the following temporary ‘Clipped’ should appear and look like this:</p>
+<p><img src="images/paste-DD412158.png" class="img-fluid"></p></li>
+<li><p>Save the ‘Clipped’ temporary layer as TE22A 15mins Buildings to the GeoPackage.</p></li>
+<li><p>For 10min Catchment Area, repeat the same steps but replacing the Overlay layer with TE22A 10mins Catchment Area, and save to GeoPackage as TE22A 10mins Buildings.</p></li>
+<li><p>If done correctly, this should be shown: (With the 10mins layer active only)</p>
+<p><img src="images/paste-B8AC09E2.png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>Repeat the Steps for Buffer, Iso-Area Polygon and Catchment area buildings for the rest of the Stage 4 Thomson-East Coast Line.</p></li>
 </ul>
 </section>
 <section id="creating-symbols-and-or-area-colour" class="level4">
 <h4 class="anchored" data-anchor-id="creating-symbols-and-or-area-colour">Creating Symbols and /or Area Colour</h4>
+<ul>
+<li><p>For point Data (Symbols)</p>
+<ul>
+<li><p>We will need to use symbols to represent the various point layers for easier visualisation.</p></li>
+<li><p>Firstly, we will save each station individually into the GeoPackage.</p></li>
+<li><p>Using TE22A station, select the feature and Save Selected Feature as GeoPackage. Name the layer Founders’ Memorial MRT.</p></li>
+<li><p>Right Click on Layer –&gt; click on Properties. A pop up ‘Layer Properties’ will appear.</p></li>
+<li><p>Click on Symbology –&gt; Simple Marker –&gt; Change the Symbol layer type to SVG Marker –&gt; Search for ‘train’ at the search bar under SVG images –&gt; double-click on the icon</p>
+<p><img src="images/paste-84E5279B.png" class="img-fluid"></p></li>
+<li><p>Repeat the steps above for the other Stage 4 Thomson-East Coast Line stations.</p></li>
+<li><p>For Circle Line, Downtown Line and East-West Line, without the need to save each station individually, repeat the above steps but with the following colours:</p>
+<p>Circle Line – #ffbf00</p>
+<p>Downtown Line – #0009be</p>
+<p>East-West Line – #00d644</p></li>
+<li><p>If done correctly, this should be shown:</p>
+<p><img src="images/paste-0DF3F9EA.png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>For Buffer Layer</p>
+<ul>
+<li><p>We will be using a standardised colour across all 10min and 15min Buffer Layers. In addition, the transparency will be lower for clearer visibility of the catchment area.</p></li>
+<li><p>Using TE22A 15mins Walking Radius, right click on select Properties. Click on Symbology –&gt; Change fill colour to #000080 –&gt; Change Opacity to 30% –&gt; Save Symbol and name it as a Buffer layer –&gt; it should appear in Project Styles for east access.</p>
+<p><img src="images/paste-71990842.png" class="img-fluid"></p></li>
+<li><p>If done correctly, this should be shown:</p>
+<p><img src="images/paste-80AC281B.png" class="img-fluid"></p></li>
+<li><p>Repeat the steps for all 10min and 15min Walking Radius (Use the Saved Symbol in Project styles for easy access).</p></li>
+<li><p>If done correctly, this should be shown:</p>
+<p><img src="images/paste-7CA52372.png" class="img-fluid"></p></li>
+</ul></li>
+<li><p>For Iso-Area Polygon</p>
+<ul>
+<li>Using TE22A 15mins Catchment Area, right click and select Properties –&gt; Click on Symbology –&gt; Change</li>
+</ul></li>
+</ul>
 </section>
 <section id="piecing-the-layers-together" class="level4">
 <h4 class="anchored" data-anchor-id="piecing-the-layers-together">Piecing the layers together</h4>
