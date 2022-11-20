@@ -310,7 +310,7 @@ Adding of Datasets
 
         ![](images/paste-5B7130F3.png)
 
-#### Piecing the layers together
+### Piecing the layers together
 
 -   After we have completed the standardisation and changing of the symbology and colours, we will now piece the layers together. Our analysis will be based on each Catchment Area based on 10mins or 15mins walking time.
 
