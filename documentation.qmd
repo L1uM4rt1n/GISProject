@@ -19,7 +19,7 @@ The Datasets that are being used for the project includes:
 
 -   [TE Stage 4 MRT Stations.csv](https://smu-my.sharepoint.com/:x:/g/personal/wenxin_law_2021_scis_smu_edu_sg/EZuQldQITppGoyfZ_Cc_-7ABX_7J3HkXakwR1AKc-8C4bw?e=LGCGhT) Using coordinates found from Google Maps, we created a CSV file for the Stage 4 MRT stations with their individual latitude and longitude points.
 
-Adding of Datasets
+### Adding of Datasets
 
 -   TE Stage 4 MRT Stations
 
@@ -103,7 +103,7 @@ Adding of Datasets
 
         ![](images/paste-E0C83C2E.png)
 
-#### Preparation of Buffers and Iso-Area Polygons
+### Preparation of Buffers and Iso-Area Polygons
 
 **Objective**: Creation of Buffer and Iso-Areas with these data
 
@@ -193,7 +193,7 @@ Adding of Datasets
 
 -   Repeat the Steps for Buffer, Iso-Area Polygon and Catchment area buildings for the rest of the Stage 4 Thomson-East Coast Line.
 
-#### Creating Symbols and /or Area Colour
+### Creating Symbols and /or Area Colour
 
 -   For point Data (Symbols)
 
